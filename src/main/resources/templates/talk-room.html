@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<hea>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>[[${@account.name}]]</h1>
+<p th:each="talk:${Talk}" th:text="${talk.messageText}"></p>
+<form action="/talk/post" method="post">
+	<input name="postText" type="text" placeholder="本文"><div></div>
+	<button>送信</button>
+</form>
+</body>
+</html>
